@@ -21,14 +21,17 @@
 # ноутбук
 #     12
 
-# points = [{"A":1}, {"E":1}, {"I":1}, {"O":1}, {"U":1}, {"L":1}, {"N":1}, {"S":1},
-#                    {"T":1},{"R":1}, {'D':2}, {'G':2}, {'B':3},{ 'C':3}, {'M':3}, {'P':3},
-#                    {'F':4}, {'H':4}, {'V':4}, {'W':4}, {'Y': 4}, {'K':5}, {'J':8}, {'X': 8},{'Q':10}, {'Z': 10}]
+points = {"A": 1, "E": 1, "I": 1, "O": 1, "U": 1, "L": 1, "N": 1, "S": 1, "T": 1, "R": 1, "D": 2, "G": 2, "B": 3, "C": 3, "M": 3, "P": 3,  "F": 4, "H": 4, "V": 4, "W": 4, "Y": 4, "K": 5, "J": 8, "X": 8, "Q": 10, "Z": 10}
 
-# points = {"A": 1, "E": 1, "I": 1, "O": 1, "U": 1, "L": 1, "N": 1, "S": 1, "T": 1, "R": 1, "D": 2, "G": 2, "B": 3, "C": 3, "M": 3, "P": 3,  "F": 4, "H": 4, "V": 4, "W": 4, "Y": 4, "K": 5, "J": 8, "X": 8, "Q": 10, "Z": 10}
-
-# word = str(input('Type in your word: '))
-# score = 0
+word = str(input('Type in your word: '))
+score = 0
+for letter in word.upper():
+    for letters in points.keys():
+        if letter in letters:
+            score+=points.get(letters)
+            print(score)
+            break
+print (score)
 # for i in word.lower():
 #     print(word(points))
 # print(score)
@@ -46,3 +49,8 @@
 #     return total
 
 # print scrabble_score("POTATOES")
+
+
+# points = [{"A":1}, {"E":1}, {"I":1}, {"O":1}, {"U":1}, {"L":1}, {"N":1}, {"S":1},
+#                    {"T":1},{"R":1}, {'D':2}, {'G':2}, {'B':3},{ 'C':3}, {'M':3}, {'P':3},
+#                    {'F':4}, {'H':4}, {'V':4}, {'W':4}, {'Y': 4}, {'K':5}, {'J':8}, {'X': 8},{'Q':10}, {'Z': 10}]
