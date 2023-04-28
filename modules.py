@@ -1,3 +1,5 @@
+import random
+
 def quick_sort(array):
     if len(array) <= 1:
         return array
@@ -38,3 +40,14 @@ def merge_sort(nums):
             nums[k] = left[i]
             i += 1
             k += 1
+
+
+def random_generator_of_numbers(amount):
+    num_list = []
+    for i in range(amount):
+       num_list.append(random.randint(1,6))
+       i+=1
+    return num_list
+
+list_to_sort=random_generator_of_numbers(5)
+print(quick_sort(list_to_sort))
